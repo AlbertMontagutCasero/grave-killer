@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 665853019}
   m_Layer: 0
-  m_Name: SpawnPoint
+  m_Name: PlayerSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -276,6 +276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerView: {fileID: 6711713885034651428, guid: adbf175e70b6e2a408999926e47a3474, type: 3}
+  enemyGeneratorPrefab: {fileID: 5158066161725287385, guid: 4db94da2131d22c4f85aa9bc08d50c0b, type: 3}
   spawnPosition: {fileID: 665853018}
 --- !u!4 &812968019
 Transform:
