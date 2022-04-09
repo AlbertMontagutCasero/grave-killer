@@ -1,71 +1,53 @@
 fileFormatVersion: 2
-guid: 801e15181761319458790079f12d12c5
+guid: 47d981c1810894845ae4a10e521e572c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8021632264756562190
-    second: skeleton-variation1-attack_0
+      213: -8254831876751780006
+    second: skeleton-variation1-attack-short_0
   - first:
-      213: -648526334539690120
-    second: skeleton-variation1-attack_1
+      213: -1534712200024057853
+    second: skeleton-variation1-attack-short_1
   - first:
-      213: 6296065559709638053
-    second: skeleton-variation1-attack_2
+      213: -7533658107320051280
+    second: skeleton-variation1-attack-short_2
   - first:
-      213: 4825127077980660150
-    second: skeleton-variation1-attack_3
+      213: -773323573582005130
+    second: skeleton-variation1-attack-short_3
   - first:
-      213: -5327666923197458786
-    second: skeleton-variation1-attack_4
+      213: 4778977215817045388
+    second: skeleton-variation1-attack-short_4
   - first:
-      213: -4290679949303966114
-    second: skeleton-variation1-attack_5
+      213: 5342559823429047049
+    second: skeleton-variation1-attack-short_5
   - first:
-      213: -2403995505470784675
-    second: skeleton-variation1-attack_6
+      213: -3820849200266037498
+    second: skeleton-variation1-attack-short_6
   - first:
-      213: 750309569948395457
-    second: skeleton-variation1-attack_7
+      213: -4406329105737259778
+    second: skeleton-variation1-attack-short_7
   - first:
-      213: 9153983874830322722
-    second: skeleton-variation1-attack_8
+      213: -4917950671165438663
+    second: skeleton-variation1-attack-short_8
   - first:
-      213: 8081878780938754345
-    second: skeleton-variation1-attack_9
+      213: -9038052871599501678
+    second: skeleton-variation1-attack-short_9
   - first:
-      213: 566246961024972930
-    second: skeleton-variation1-attack_10
-  - first:
-      213: 8996098473203161781
-    second: skeleton-variation1-attack_11
-  - first:
-      213: 2707014420955026821
-    second: skeleton-variation1-attack_12
-  - first:
-      213: -765124162576679811
-    second: skeleton-variation1-attack_13
-  - first:
-      213: 7845011171312433511
-    second: skeleton-variation1-attack_14
-  - first:
-      213: -3395574327248820003
-    second: skeleton-variation1-attack_15
-  - first:
-      213: 2885871618756086407
-    second: skeleton-variation1-attack_16
+      213: -840300217891719274
+    second: skeleton-variation1-attack-short_10
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
-    mipMapMode: 1
+    mipMapMode: 0
     enableMipMap: 0
-    sRGBTexture: 0
+    sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
     mipMapsPreserveCoverage: 0
     alphaTestReferenceValue: 0.5
-    mipMapFadeDistanceStart: 5
-    mipMapFadeDistanceEnd: 7
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
   bumpmap:
     convertToNormalMap: 0
     externalNormalMap: 0
@@ -116,7 +98,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -128,7 +110,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -140,7 +122,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: iPhone
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -152,7 +134,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -164,7 +146,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -178,12 +160,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: skeleton-variation1-attack_0
+      name: skeleton-variation1-attack-short_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
+        width: 128.18182
         height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -192,19 +174,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f67f54a4ff6da090800000000000000
-      internalID: -8021632264756562190
+      spriteID: a5793a1e422f07d80800000000000000
+      internalID: -8254831876751780006
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skeleton-variation1-attack_1
+      name: skeleton-variation1-attack-short_1
       rect:
         serializedVersion: 2
         x: 128
         y: 0
-        width: 128
+        width: 128.18182
         height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -213,19 +195,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 87f864a1cb8fff6f0800000000000000
-      internalID: -648526334539690120
+      spriteID: 3089b15a26b93bae0800000000000000
+      internalID: -1534712200024057853
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skeleton-variation1-attack_2
+      name: skeleton-variation1-attack-short_2
       rect:
         serializedVersion: 2
         x: 256
         y: 0
-        width: 128
+        width: 128.18182
         height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -234,19 +216,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ad5011c44e106750800000000000000
-      internalID: 6296065559709638053
+      spriteID: 0b952fdcdd1137790800000000000000
+      internalID: -7533658107320051280
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skeleton-variation1-attack_3
+      name: skeleton-variation1-attack-short_3
       rect:
         serializedVersion: 2
         x: 384
         y: 0
-        width: 128
+        width: 128.18182
         height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -255,19 +237,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b1e727438b46f240800000000000000
-      internalID: 4825127077980660150
+      spriteID: 67c753c9e4a9445f0800000000000000
+      internalID: -773323573582005130
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skeleton-variation1-attack_4
+      name: skeleton-variation1-attack-short_4
       rect:
         serializedVersion: 2
         x: 512
         y: 0
-        width: 128
+        width: 128.18182
         height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -276,19 +258,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e96973919235016b0800000000000000
-      internalID: -5327666923197458786
+      spriteID: c85d57a2576525240800000000000000
+      internalID: 4778977215817045388
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skeleton-variation1-attack_5
+      name: skeleton-variation1-attack-short_5
       rect:
         serializedVersion: 2
         x: 640
         y: 0
-        width: 128
+        width: 128.18182
         height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -297,19 +279,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5698d0b1517474c0800000000000000
-      internalID: -4290679949303966114
+      spriteID: 90313c27ad5942a40800000000000000
+      internalID: 5342559823429047049
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skeleton-variation1-attack_6
+      name: skeleton-variation1-attack-short_6
       rect:
         serializedVersion: 2
         x: 768
         y: 0
-        width: 128
+        width: 128.18182
         height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -318,19 +300,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5b37ce13da43aed0800000000000000
-      internalID: -2403995505470784675
+      spriteID: 607bec565ed99fac0800000000000000
+      internalID: -3820849200266037498
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skeleton-variation1-attack_7
+      name: skeleton-variation1-attack-short_7
       rect:
         serializedVersion: 2
         x: 896
         y: 0
-        width: 128
+        width: 128.18182
         height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -339,19 +321,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c7a95c1492a96a00800000000000000
-      internalID: 750309569948395457
+      spriteID: ef4e019260399d2c0800000000000000
+      internalID: -4406329105737259778
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skeleton-variation1-attack_8
+      name: skeleton-variation1-attack-short_8
       rect:
         serializedVersion: 2
         x: 1024
         y: 0
-        width: 128
+        width: 128.18182
         height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -360,19 +342,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22c4ae295db790f70800000000000000
-      internalID: 9153983874830322722
+      spriteID: 9354a46cbedefbbb0800000000000000
+      internalID: -4917950671165438663
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skeleton-variation1-attack_9
+      name: skeleton-variation1-attack-short_9
       rect:
         serializedVersion: 2
         x: 1152
         y: 0
-        width: 128
+        width: 128.18182
         height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -381,19 +363,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9291f9f7ee9982070800000000000000
-      internalID: 8081878780938754345
+      spriteID: 29ecc178cc2629280800000000000000
+      internalID: -9038052871599501678
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skeleton-variation1-attack_10
+      name: skeleton-variation1-attack-short_10
       rect:
         serializedVersion: 2
         x: 1280
         y: 0
-        width: 128
+        width: 128.18182
         height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -402,134 +384,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 288b9076c96bbd700800000000000000
-      internalID: 566246961024972930
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: skeleton-variation1-attack_11
-      rect:
-        serializedVersion: 2
-        x: 1408
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5ba55b3e5ef88dc70800000000000000
-      internalID: 8996098473203161781
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: skeleton-variation1-attack_12
-      rect:
-        serializedVersion: 2
-        x: 1536
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 58552e2064f319520800000000000000
-      internalID: 2707014420955026821
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: skeleton-variation1-attack_13
-      rect:
-        serializedVersion: 2
-        x: 1664
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d7c7c80c0abb165f0800000000000000
-      internalID: -765124162576679811
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: skeleton-variation1-attack_14
-      rect:
-        serializedVersion: 2
-        x: 1792
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7697c0d78141fdc60800000000000000
-      internalID: 7845011171312433511
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: skeleton-variation1-attack_15
-      rect:
-        serializedVersion: 2
-        x: 1920
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dd8e5efc32f70e0d0800000000000000
-      internalID: -3395574327248820003
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: skeleton-variation1-attack_16
-      rect:
-        serializedVersion: 2
-        x: 2048
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 78a865f72fcac0820800000000000000
-      internalID: 2885871618756086407
+      spriteID: 69771e76767a654f0800000000000000
+      internalID: -840300217891719274
       vertices: []
       indices: 
       edges: []
