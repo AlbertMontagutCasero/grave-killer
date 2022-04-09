@@ -1,43 +1,55 @@
 fileFormatVersion: 2
-guid: c2cc4a2a595b63946a10a6a4a8f43d75
+guid: c0b2e72e27ee54b4f965c882de6b22f6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5210557507750172339
-    second: candle-burning_0
+      213: 1346923333987898577
+    second: doors-metal-door frame 4-opening-between levels FX_0
   - first:
-      213: 4588702340574848079
-    second: candle-burning_1
+      213: 7701908870000273506
+    second: doors-metal-door frame 4-opening-between levels FX_1
   - first:
-      213: -2428139008599311313
-    second: candle-burning_2
+      213: 6622739717702530800
+    second: doors-metal-door frame 4-opening-between levels FX_2
   - first:
-      213: -3529638401446870436
-    second: candle-burning_3
+      213: 692645040063631921
+    second: doors-metal-door frame 4-opening-between levels FX_3
   - first:
-      213: -847321270175315896
-    second: candle-burning_4
+      213: -1305395135731433920
+    second: doors-metal-door frame 4-opening-between levels FX_4
   - first:
-      213: -2662732670604101004
-    second: candle-burning_5
+      213: 1924729477044270876
+    second: doors-metal-door frame 4-opening-between levels FX_5
   - first:
-      213: -7123830611669530702
-    second: candle-burning_6
+      213: 7005621797502982377
+    second: doors-metal-door frame 4-opening-between levels FX_6
   - first:
-      213: -459616585306130865
-    second: candle-burning_7
+      213: -3486924143169648341
+    second: doors-metal-door frame 4-opening-between levels FX_7
   - first:
-      213: -5238147210504781646
-    second: candle-burning_8
+      213: -2542384387165629141
+    second: doors-metal-door frame 4-opening-between levels FX_8
   - first:
-      213: 8127683513442514015
-    second: candle-burning_9
+      213: 5866503912617880516
+    second: doors-metal-door frame 4-opening-between levels FX_9
   - first:
-      213: -4201017178889408409
-    second: candle-burning_10
+      213: -4215164344219784753
+    second: doors-metal-door frame 4-opening-between levels FX_10
   - first:
-      213: 8718284174066696927
-    second: candle-burning_11
+      213: -8024839869960505746
+    second: doors-metal-door frame 4-opening-between levels FX_11
+  - first:
+      213: 3633602881329332730
+    second: doors-metal-door frame 4-opening-between levels FX_12
+  - first:
+      213: 1078503352489657615
+    second: doors-metal-door frame 4-opening-between levels FX_13
+  - first:
+      213: -5690616197376574011
+    second: doors-metal-door frame 4-opening-between levels FX_14
+  - first:
+      213: -409896424110945506
+    second: doors-metal-door frame 4-opening-between levels FX_15
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -163,13 +175,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: candle-burning_0
+      name: doors-metal-door frame 4-opening-between levels FX_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
+        width: 128
+        height: 117
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,41 +189,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b69133527e9f4840800000000000000
-      internalID: 5210557507750172339
+      spriteID: 1d4980ec2ab31b210800000000000000
+      internalID: 1346923333987898577
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: candle-burning_1
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f44a7fd77785eaf30800000000000000
-      internalID: 4588702340574848079
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: candle-burning_2
+      name: doors-metal-door frame 4-opening-between levels FX_1
       rect:
         serializedVersion: 2
         x: 128
         y: 0
-        width: 64
-        height: 64
+        width: 128
+        height: 117
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -219,41 +210,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2c3b2fbf648d4ed0800000000000000
-      internalID: -2428139008599311313
+      spriteID: 268ebc09f4da2ea60800000000000000
+      internalID: 7701908870000273506
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: candle-burning_3
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c528e202394340fc0800000000000000
-      internalID: -3529638401446870436
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: candle-burning_4
+      name: doors-metal-door frame 4-opening-between levels FX_2
       rect:
         serializedVersion: 2
         x: 256
         y: 0
-        width: 64
-        height: 64
+        width: 128
+        height: 117
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -261,41 +231,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84841984bc5bd34f0800000000000000
-      internalID: -847321270175315896
+      spriteID: 0f6b7893fa2b8eb50800000000000000
+      internalID: 6622739717702530800
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: candle-burning_5
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 47ab0dc6eb21c0bd0800000000000000
-      internalID: -2662732670604101004
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: candle-burning_6
+      name: doors-metal-door frame 4-opening-between levels FX_3
       rect:
         serializedVersion: 2
         x: 384
         y: 0
-        width: 64
-        height: 64
+        width: 128
+        height: 117
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -303,41 +252,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b742676dc1132d90800000000000000
-      internalID: -7123830611669530702
+      spriteID: 132dd608ef4cc9900800000000000000
+      internalID: 692645040063631921
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: candle-burning_7
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f4633fb962d1f99f0800000000000000
-      internalID: -459616585306130865
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: candle-burning_8
+      name: doors-metal-door frame 4-opening-between levels FX_4
       rect:
         serializedVersion: 2
         x: 512
         y: 0
-        width: 64
-        height: 64
+        width: 128
+        height: 117
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -345,41 +273,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b0c8ac6ddc5e47b0800000000000000
-      internalID: -5238147210504781646
+      spriteID: 04e74335a0e42ede0800000000000000
+      internalID: -1305395135731433920
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: candle-burning_9
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f543a89d7155bc070800000000000000
-      internalID: 8127683513442514015
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: candle-burning_10
+      name: doors-metal-door frame 4-opening-between levels FX_5
       rect:
         serializedVersion: 2
         x: 640
         y: 0
-        width: 64
-        height: 64
+        width: 128
+        height: 117
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -387,20 +294,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 760bbfc322df2b5c0800000000000000
-      internalID: -4201017178889408409
+      spriteID: c1772fff24306ba10800000000000000
+      internalID: 1924729477044270876
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: candle-burning_11
+      name: doors-metal-door frame 4-opening-between levels FX_6
       rect:
         serializedVersion: 2
-        x: 704
+        x: 768
         y: 0
-        width: 64
-        height: 64
+        width: 128
+        height: 117
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -408,8 +315,197 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd2c72ec3419df870800000000000000
-      internalID: 8718284174066696927
+      spriteID: 9e816ee48e7f83160800000000000000
+      internalID: 7005621797502982377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doors-metal-door frame 4-opening-between levels FX_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 128
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b29c3af57f4fb9fc0800000000000000
+      internalID: -3486924143169648341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doors-metal-door frame 4-opening-between levels FX_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 128
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b255e78bed2a7bcd0800000000000000
+      internalID: -2542384387165629141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doors-metal-door frame 4-opening-between levels FX_9
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 128
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cb2709f9320a6150800000000000000
+      internalID: 5866503912617880516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doors-metal-door frame 4-opening-between levels FX_10
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 128
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc923e0ac5ab085c0800000000000000
+      internalID: -4215164344219784753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doors-metal-door frame 4-opening-between levels FX_11
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 0
+        width: 128
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e66bc9bd7aa02a090800000000000000
+      internalID: -8024839869960505746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doors-metal-door frame 4-opening-between levels FX_12
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 128
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af18874a1962d6230800000000000000
+      internalID: 3633602881329332730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doors-metal-door frame 4-opening-between levels FX_13
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 0
+        width: 128
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f05c63eb51d97fe00800000000000000
+      internalID: 1078503352489657615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doors-metal-door frame 4-opening-between levels FX_14
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 0
+        width: 128
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cdf84af7bed601b0800000000000000
+      internalID: -5690616197376574011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doors-metal-door frame 4-opening-between levels FX_15
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 128
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1b0a2ebf51cf4af0800000000000000
+      internalID: -409896424110945506
       vertices: []
       indices: 
       edges: []
