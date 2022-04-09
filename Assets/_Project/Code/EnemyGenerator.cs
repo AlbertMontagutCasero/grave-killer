@@ -42,9 +42,4 @@ namespace GraveKiller
             return current;
         }
     }
-
-    public interface EnemyGeneratorMotor
-    {
-        void GenerateNewEnemy();
-    }
 }

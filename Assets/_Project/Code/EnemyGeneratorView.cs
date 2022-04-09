@@ -13,12 +13,14 @@ namespace GraveKiller
         private float spawnEvery = 5f;
 
         [SerializeField]
-        private GameObject enemy;
+        private EnemyView enemy;
 
         private EnemyGenerator enemyGenerator;
+        private List<EnemyView> instantiatedEnemies;
 
         private void Awake()
         {
+            this.instantiatedEnemies = new List<EnemyView>();
             var spawnPointsVectors = this.GetSpawnPointsVectors();
 
             this.enemyGenerator = new EnemyGenerator(this.spawnEvery,
@@ -45,13 +47,24 @@ namespace GraveKiller
 
         public void ManagedUpdate(float delta)
         {
+            this.MoveEnemies(delta);   
             this.enemyGenerator.AddTime(delta);
+        }
+
+        private void MoveEnemies(float delta)
+        {
+            for (int i = 0; i < this.instantiatedEnemies.Count; i++)
+            {
+                var current = this.instantiatedEnemies[i];
+                current.ManagedUpdate(delta);
+            }
         }
 
         public void GenerateNewEnemy()
         {
             var spawnPoint = this.enemyGenerator.GetSpawnPoint().ToUnityVector3();
             var instantiatedEnemy = Instantiate(this.enemy, spawnPoint, Quaternion.identity);
+            this.instantiatedEnemies.Add(instantiatedEnemy);
         }
     }
 }

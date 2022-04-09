@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using Vector2 = System.Numerics.Vector2;
-using Vector3 = System.Numerics.Vector3;
 
 namespace GraveKiller
 {
@@ -12,6 +11,8 @@ namespace GraveKiller
         {
             var playerSpeed = 5;
             this.player = new Player(this, new PlayerStats(playerSpeed));
+            
+            GameControllerLocator.GetInstance().RegisterController(this);
         }
 
         public Vector2 GetPosition()
@@ -49,6 +50,5 @@ namespace GraveKiller
                 .GetNextPosition(movementRequest, delta)
                 .ToUnityVector3();
         }
-        
     }
 }
