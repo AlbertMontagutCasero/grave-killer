@@ -1,5 +1,5 @@
-﻿using System.Numerics;
-using NUnit.Framework;
+﻿using NUnit.Framework;
+using UnityEngine;
 
 namespace GraveKiller
 {
@@ -12,11 +12,11 @@ namespace GraveKiller
         public void InputDirectionTest(int left, int right, int top, int down, int expectedDirectionX, int expectedDirectionY)
         {
             var movementRequest = new MovementRequest();
-            movementRequest.direction.X -= left;
-            movementRequest.direction.X += right;
+            movementRequest.direction.x -= left;
+            movementRequest.direction.x += right;
 
-            movementRequest.direction.Y += top;
-            movementRequest.direction.Y -= down;
+            movementRequest.direction.y += top;
+            movementRequest.direction.y -= down;
 
             var expectedDirection =
                 new Vector2(expectedDirectionX, expectedDirectionY);
@@ -35,7 +35,7 @@ namespace GraveKiller
         public void HasMovement()
         {
             var sut = new MovementRequest();
-            sut.direction.Y = 1;
+            sut.direction.y = 1;
             
             Assert.That(sut.HasDirection());
         }

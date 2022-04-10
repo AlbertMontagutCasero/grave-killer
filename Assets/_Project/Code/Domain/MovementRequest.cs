@@ -1,6 +1,4 @@
-﻿
-using System.Numerics;
-
+﻿using UnityEngine;
 namespace GraveKiller
 {
     public class MovementRequest
@@ -15,7 +13,7 @@ namespace GraveKiller
         
         public bool HasDirection()
         {
-            return this.direction.LengthSquared() > PRECISION;
+            return this.direction.SqrMagnitude() > PRECISION;
         }
     }
 }

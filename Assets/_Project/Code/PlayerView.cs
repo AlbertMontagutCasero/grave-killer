@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using Vector2 = System.Numerics.Vector2;
 
 namespace GraveKiller
 {
@@ -17,7 +16,7 @@ namespace GraveKiller
 
         public Vector2 GetPosition()
         {
-            return this.transform.position.ToSystemVector2();
+            return this.transform.position;
         }
 
         public void ManagedUpdate(float delta)
@@ -31,24 +30,23 @@ namespace GraveKiller
 
             if (Input.GetKey(KeyCode.D))
             {
-                movementRequest.direction.X += 1;
+                movementRequest.direction.x += 1;
             }
             if (Input.GetKey(KeyCode.A))
             {
-                movementRequest.direction.X -= 1;
+                movementRequest.direction.x -= 1;
             }
             if (Input.GetKey(KeyCode.W))
             {
-                movementRequest.direction.Y += 1;
+                movementRequest.direction.y += 1;
             }
             if (Input.GetKey(KeyCode.S))
             {
-                movementRequest.direction.Y -= 1;
+                movementRequest.direction.y -= 1;
             }
 
             this.transform.position = this.player
-                .GetNextPosition(movementRequest, delta)
-                .ToUnityVector3();
+                .GetNextPosition(movementRequest, delta);
         }
     }
 }

@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using Vector2 = System.Numerics.Vector2;
 
 namespace GraveKiller
 {
@@ -17,22 +16,12 @@ namespace GraveKiller
 
         public void ManagedUpdate(float delta)
         {
-            this.transform.position = this.enemy.GetNextMovement(delta).ToUnityVector3();
+            this.transform.position = this.enemy.GetNextMovement(delta);
         }
 
         public Vector2 GetPosition()
         {
-            return this.transform.position.ToSystemVector2();
+            return this.transform.position;
         }
-    }
-
-    public interface EnemyMotor
-    {
-        Vector2 GetPosition();
-    }
-
-    public interface PlayerPositionProvider
-    {
-        Vector2 GetPosition();
     }
 }

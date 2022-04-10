@@ -1,8 +1,8 @@
-﻿using System.Numerics;
+using UnityEngine;
 
 namespace GraveKiller
 {
-    public interface PlayerMotor
+    public interface PlayerPositionProvider
     {
         Vector2 GetPosition();
     }

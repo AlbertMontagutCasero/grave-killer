@@ -1,6 +1,6 @@
-﻿using System.Numerics;
-using NSubstitute;
+﻿using NSubstitute;
 using NUnit.Framework;
+using UnityEngine;
 
 namespace GraveKiller
 {
@@ -20,14 +20,14 @@ namespace GraveKiller
             
             var sut = new Player(doc, new PlayerStats(speed));
             var movementRequest = new MovementRequest();
-            movementRequest.direction.X = xDirection;
-            movementRequest.direction.Y = yDirection;
+            movementRequest.direction.x = xDirection;
+            movementRequest.direction.y = yDirection;
 
             var result = sut.GetNextPosition(movementRequest, delta);
 
             var expectedResult =
-                new Vector2(startPosition.X + speed * delta * xDirection,
-                    startPosition.Y + speed * delta * yDirection);
+                new Vector2(startPosition.x + speed * delta * xDirection,
+                    startPosition.y + speed * delta * yDirection);
             
             Assert.That(result.Equals(expectedResult));
         }
