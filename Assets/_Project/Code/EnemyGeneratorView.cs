@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using Vector2 = System.Numerics.Vector2;
 
 namespace GraveKiller
 {
@@ -37,7 +36,7 @@ namespace GraveKiller
                 var current = this.spawnPoints[i];
 
                 var spawnPosition =
-                    current.transform.position.ToSystemVector2();
+                    current.transform.position;
 
                 spawnVectorPositions.Add(spawnPosition);
             }
@@ -62,7 +61,7 @@ namespace GraveKiller
 
         public void GenerateNewEnemy()
         {
-            var spawnPoint = this.enemyGenerator.GetSpawnPoint().ToUnityVector3();
+            var spawnPoint = this.enemyGenerator.GetSpawnPoint();
             var instantiatedEnemy = Instantiate(this.enemy, spawnPoint, Quaternion.identity);
             this.instantiatedEnemies.Add(instantiatedEnemy);
         }

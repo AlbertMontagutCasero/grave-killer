@@ -4,6 +4,6 @@ namespace GraveKiller
 {
     public interface EnemyMotor
     {
-        Vector2 GetPosition();
+        Vector3 GetPosition();
     }
 }

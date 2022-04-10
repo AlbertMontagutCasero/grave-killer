@@ -9,18 +9,19 @@ namespace GraveKiller
         [TestCase( 1, 0, 0, 0,-1, 0)]
         [TestCase( 0, 1, 0, 0,1, 0)]
         [TestCase( 0, 0, 0, 1,0, -1)]
-        public void InputDirectionTest(int left, int right, int top, int down, int expectedDirectionX, int expectedDirectionY)
+        public void InputDirectionTest(int left, int right, int top, int down, int expectedDirectionX, int expectedDirectionForward)
         {
             var movementRequest = new MovementRequest();
-            movementRequest.direction.x -= left;
-            movementRequest.direction.x += right;
+            movementRequest.SetHorizontal(-left);
+            movementRequest.SetHorizontal(right);
 
-            movementRequest.direction.y += top;
-            movementRequest.direction.y -= down;
+            movementRequest.SetForward(top);
+            movementRequest.SetForward(-down);
 
             var expectedDirection =
-                new Vector2(expectedDirectionX, expectedDirectionY);
-            Assert.That(movementRequest.direction.Equals(expectedDirection));
+                new Vector3(expectedDirectionX, 0, expectedDirectionForward);
+            var result = movementRequest.GetVector3Direction();
+            Assert.That(result.Equals(expectedDirection));
         }
 
         [Test]
@@ -35,7 +36,7 @@ namespace GraveKiller
         public void HasMovement()
         {
             var sut = new MovementRequest();
-            sut.direction.y = 1;
+            sut.SetForward(1);
             
             Assert.That(sut.HasDirection());
         }

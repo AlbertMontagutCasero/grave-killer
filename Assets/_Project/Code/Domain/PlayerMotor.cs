@@ -1,9 +1,7 @@
-﻿using UnityEngine;
-
-namespace GraveKiller
+﻿namespace GraveKiller
 {
-    public interface PlayerMotor
+    public interface PlayerMotor: PlayerPositionProvider
     {
-        Vector2 GetPosition();
+        
     }
 }

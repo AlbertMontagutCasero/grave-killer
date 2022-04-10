@@ -11,10 +11,10 @@ namespace GraveKiller
             var playerSpeed = 5;
             this.player = new Player(this, new PlayerStats(playerSpeed));
             
-            GameControllerLocator.GetInstance().RegisterController(this);
+            GameControllerLocator.GetInstance().RegisterController<PlayerPositionProvider>(this);
         }
 
-        public Vector2 GetPosition()
+        public Vector3 GetPosition()
         {
             return this.transform.position;
         }
@@ -30,19 +30,19 @@ namespace GraveKiller
 
             if (Input.GetKey(KeyCode.D))
             {
-                movementRequest.direction.x += 1;
+                movementRequest.SetHorizontal(1);
             }
             if (Input.GetKey(KeyCode.A))
             {
-                movementRequest.direction.x -= 1;
+                movementRequest.SetHorizontal(-1);
             }
             if (Input.GetKey(KeyCode.W))
             {
-                movementRequest.direction.y += 1;
+                movementRequest.SetForward(1);
             }
             if (Input.GetKey(KeyCode.S))
             {
-                movementRequest.direction.y -= 1;
+                movementRequest.SetForward(-1);
             }
 
             this.transform.position = this.player

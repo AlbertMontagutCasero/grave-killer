@@ -13,14 +13,15 @@ namespace GraveKiller
             this.enemyMotor = enemyMotor;
             this.speed = 5;
         }
-        public Vector2 GetNextMovement(float deltaSecondsElapsed)
+        public Vector3 GetNextMovement(float deltaSecondsElapsed)
         {
             var playerPosition = this.playerPositionProvider.GetPosition();
             var enemyCurrentPosition = this.enemyMotor.GetPosition();
 
-            Vector2 currentPosition = (playerPosition - enemyCurrentPosition);
+            var nextPosition =
+                Vector3.MoveTowards(enemyCurrentPosition, playerPosition, deltaSecondsElapsed * this.speed);
 
-            return currentPosition;
+            return nextPosition;
         }
 
     }

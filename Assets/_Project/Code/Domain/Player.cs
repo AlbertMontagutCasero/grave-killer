@@ -13,7 +13,7 @@ namespace GraveKiller
             this.stats = stats;
         }
 
-        public Vector2 GetNextPosition(
+        public Vector3 GetNextPosition(
             MovementRequest movementRequest,
             float delta)
         {
@@ -22,24 +22,24 @@ namespace GraveKiller
                 return this.GetPosition();
             }
 
-            Vector2 requestedDirection = movementRequest.direction;
+            Vector3 requestedDirection = movementRequest.GetVector3Direction();
 
-            Vector2 deltaPosition =
+            Vector3 deltaPosition =
                 this.GetDeltaMovement(delta, requestedDirection);
 
-            Vector2 finalPosition = this.GetPosition() + deltaPosition;
+            Vector3 finalPosition = this.GetPosition() + deltaPosition;
 
             return finalPosition;
         }
 
-        private Vector2 GetPosition()
+        private Vector3 GetPosition()
         {
             return this.playerMotor.GetPosition();
         }
 
-        private Vector2 GetDeltaMovement(
+        private Vector3 GetDeltaMovement(
             float delta,
-            Vector2 requestedDirection)
+            Vector3 requestedDirection)
         {
             return requestedDirection * (delta * this.stats.GetSpeed());
         }

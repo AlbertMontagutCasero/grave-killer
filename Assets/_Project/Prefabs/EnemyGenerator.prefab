@@ -204,4 +204,4 @@ MonoBehaviour:
   - {fileID: 5158066160289640699}
   - {fileID: 5158066161544564967}
   spawnEvery: 3
-  enemy: {fileID: 3392962388561403521, guid: 39ee8467c9e21494c937ff302aa246b8, type: 3}
+  enemy: {fileID: 9013493403982945125, guid: 39ee8467c9e21494c937ff302aa246b8, type: 3}
