@@ -5,13 +5,24 @@ namespace GraveKiller
     public class PlayerView : MonoBehaviour, PlayerMotor
     {
         private Player player;
+        private MovementRequest movementRequest;
+        
+        private CharacterController characterController;
 
         private void Awake()
         {
-            var playerSpeed = 5;
-            this.player = new Player(this, new PlayerStats(playerSpeed));
+            this.characterController = this.GetComponent<CharacterController>();
             
-            GameControllerLocator.GetInstance().RegisterController<PlayerPositionProvider>(this);
+            var playerSpeed = 10f;
+            this.player = new Player(this, new PlayerStats(playerSpeed));
+        }
+
+        public void RequestMovement(MovementRequest request)
+        {
+            if (this.movementRequest == null)
+            {
+                this.movementRequest = request;
+            }
         }
 
         public Vector3 GetPosition()
@@ -19,34 +30,34 @@ namespace GraveKiller
             return this.transform.position;
         }
 
-        public void ManagedUpdate(float delta)
+        private void FixedUpdate()
         {
-            this.DetectPlayerInput(delta);
+            if (this.IsMovementRequestConsumed())
+            {
+                return;
+            }
+
+            this.MovePlayer();
+            this.ConsumeRequest();
         }
-        
-        private void DetectPlayerInput(float delta)
+
+        private bool IsMovementRequestConsumed()
         {
-            var movementRequest = new MovementRequest();
+            return this.movementRequest == null;
+        }
 
-            if (Input.GetKey(KeyCode.D))
-            {
-                movementRequest.SetHorizontal(1);
-            }
-            if (Input.GetKey(KeyCode.A))
-            {
-                movementRequest.SetHorizontal(-1);
-            }
-            if (Input.GetKey(KeyCode.W))
-            {
-                movementRequest.SetForward(1);
-            }
-            if (Input.GetKey(KeyCode.S))
-            {
-                movementRequest.SetForward(-1);
-            }
+        private void MovePlayer()
+        {
+            var nextPositionIntention =
+                this.player.GetNextPositionDelta(this.movementRequest,
+                    Time.fixedDeltaTime);
 
-            this.transform.position = this.player
-                .GetNextPosition(movementRequest, delta);
+            this.characterController.Move(nextPositionIntention);
+        }
+
+        private void ConsumeRequest()
+        {
+            this.movementRequest = null;
         }
     }
 }

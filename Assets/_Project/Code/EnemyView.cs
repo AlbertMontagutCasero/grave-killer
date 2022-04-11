@@ -5,25 +5,24 @@ namespace GraveKiller
     public class EnemyView: MonoBehaviour, EnemyMotor
     {
         private Enemy enemy;
-        private bool spawned;
+        private CharacterController characterController;
 
         private void Awake()
+        {
+            this.characterController = this.GetComponent<CharacterController>();
+        }
+
+        public void SetUp()
         {
             var playerPositionProvider = GameControllerLocator.GetInstance()
                 .GetController<PlayerPositionProvider>();
 
             this.enemy = new Enemy(playerPositionProvider,this);
-            this.spawned = true;
         }
 
         public void ManagedUpdate(float delta)
         {
-            if (!this.spawned)
-            {
-                return;
-            }
-            
-            this.transform.position = this.enemy.GetNextMovement(delta);
+            this.characterController.Move(this.enemy.GetNextMovement(delta));            
         }
 
         public Vector3 GetPosition()

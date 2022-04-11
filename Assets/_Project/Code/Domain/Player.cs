@@ -13,35 +13,25 @@ namespace GraveKiller
             this.stats = stats;
         }
 
-        public Vector3 GetNextPosition(
-            MovementRequest movementRequest,
-            float delta)
-        {
-            if (!movementRequest.HasDirection())
-            {
-                return this.GetPosition();
-            }
-
-            Vector3 requestedDirection = movementRequest.GetVector3Direction();
-
-            Vector3 deltaPosition =
-                this.GetDeltaMovement(delta, requestedDirection);
-
-            Vector3 finalPosition = this.GetPosition() + deltaPosition;
-
-            return finalPosition;
-        }
-
         private Vector3 GetPosition()
         {
             return this.playerMotor.GetPosition();
         }
 
-        private Vector3 GetDeltaMovement(
-            float delta,
-            Vector3 requestedDirection)
+        public Vector3 GetNextPositionDelta(
+            MovementRequest request,
+            float delta)
         {
-            return requestedDirection * (delta * this.stats.GetSpeed());
+            var requestedDirection = request.GetVector3Direction();
+
+            if (!request.HasDirection())
+            {
+                return Vector3.zero;
+            }
+
+            return new CharacterMovement(requestedDirection,
+                delta,
+                this.stats.GetSpeed()).GetNextPositionDelta();
         }
     }
 }

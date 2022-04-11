@@ -27,26 +27,24 @@ namespace GraveKiller
                 spawnPointsVectors);
         }
 
-        private List<Vector2> GetSpawnPointsVectors()
+        private List<Vector3> GetSpawnPointsVectors()
         {
-            var spawnVectorPositions = new List<Vector2>();
+            var spawnVectorPositions = new List<Vector3>();
 
             for (var i = 0; i < this.spawnPoints.Count; i++)
             {
                 var current = this.spawnPoints[i];
-
-                var spawnPosition =
-                    current.transform.position;
-
+                var spawnPosition = current.transform.position;
                 spawnVectorPositions.Add(spawnPosition);
             }
 
             return spawnVectorPositions;
         }
 
-        public void ManagedUpdate(float delta)
+        public void Update()
         {
-            this.MoveEnemies(delta);   
+            float delta = Time.deltaTime;
+            this.MoveEnemies(delta);
             this.enemyGenerator.AddTime(delta);
         }
 
@@ -62,7 +60,11 @@ namespace GraveKiller
         public void GenerateNewEnemy()
         {
             var spawnPoint = this.enemyGenerator.GetSpawnPoint();
-            var instantiatedEnemy = Instantiate(this.enemy, spawnPoint, Quaternion.identity);
+
+            var instantiatedEnemy =
+                Instantiate(this.enemy, spawnPoint, Quaternion.identity);
+
+            instantiatedEnemy.SetUp();
             this.instantiatedEnemies.Add(instantiatedEnemy);
         }
     }

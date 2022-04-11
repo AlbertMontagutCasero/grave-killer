@@ -9,12 +9,12 @@ namespace GraveKiller
         private float spawnEverySeconds;
         private EnemyGeneratorMotor enemyGeneratorMotor;
         private int currentSpawnPoint;
-        private List<Vector2> spawnPoints;
+        private List<Vector3> spawnPoints;
 
         public EnemyGenerator(
             float spawnEverySeconds,
             EnemyGeneratorMotor enemyGeneratorMotor,
-            List<Vector2> spawnPoints)
+            List<Vector3> spawnPoints)
         {
             this.spawnEverySeconds = spawnEverySeconds;
             this.enemyGeneratorMotor = enemyGeneratorMotor;
@@ -32,7 +32,7 @@ namespace GraveKiller
             }
         }
 
-        public Vector2 GetSpawnPoint()
+        public Vector3 GetSpawnPoint()
         {
             var current = this.spawnPoints[this.currentSpawnPoint];
 
