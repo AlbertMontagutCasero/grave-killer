@@ -17,6 +17,9 @@ namespace GraveKiller
         [SerializeField]
         private GameObject spawnPosition;
         
+        [SerializeField]
+        private GameplayCamera gameplayCameraPrefab;
+        
         private void Awake()
         {
             var gameControllerLocator = GameControllerLocator.GetInstance();
@@ -24,6 +27,7 @@ namespace GraveKiller
             var keyboardInputController = this.SpawnGameplayKeyboardInputController();
             var player = this.SpawnPlayer();
             var enemy = this.SpawnEnemyGenerator();
+            var gameplayCamera = this.SpawnCamera();
 
             gameControllerLocator.RegisterController(player);
             gameControllerLocator.RegisterController<PlayerPositionProvider>(player);
@@ -31,6 +35,12 @@ namespace GraveKiller
             gameControllerLocator.RegisterController(keyboardInputController);
             
             keyboardInputController.SetUp();
+            gameplayCamera.SetUp();
+        }
+
+        private GameplayCamera SpawnCamera()
+        {
+            return Instantiate(this.gameplayCameraPrefab);;
         }
 
         private GameplayKeyboardInputController SpawnGameplayKeyboardInputController()
