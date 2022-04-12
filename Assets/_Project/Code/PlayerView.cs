@@ -6,15 +6,24 @@ namespace GraveKiller
     {
         private Player player;
         private MovementRequest movementRequest;
-        
+
         private CharacterController characterController;
+        private AimerSelector aimer;
+
+        [SerializeField]
+        private float rotationSpeed = 20;
+
+        [SerializeField]
+        private PlayerStatsScriptableObject playerStats;
 
         private void Awake()
         {
             this.characterController = this.GetComponent<CharacterController>();
-            
-            var playerSpeed = 10f;
-            this.player = new Player(this, new PlayerStats(playerSpeed));
+
+            this.player = new Player(this, this.playerStats);
+
+            this.aimer =
+                new AimerSelector(new PhysicsSphereRaycastUnity(), this, this.playerStats);
         }
 
         public void RequestMovement(MovementRequest request)
@@ -34,11 +43,22 @@ namespace GraveKiller
         {
             if (this.IsMovementRequestConsumed())
             {
+                this.Rotate();
+
                 return;
             }
 
-            this.MovePlayer();
-            this.ConsumeRequest();
+            this.aimer.SetUp(this.movementRequest);
+            this.Rotate();
+            this.Move();
+            this.ConsumeMovementRequest();
+        }
+
+        private void Rotate()
+        {
+            this.transform.rotation = Quaternion.Slerp(this.transform.rotation,
+                this.aimer.GetNextRotation(),
+                Time.fixedDeltaTime * this.rotationSpeed);
         }
 
         private bool IsMovementRequestConsumed()
@@ -46,7 +66,7 @@ namespace GraveKiller
             return this.movementRequest == null;
         }
 
-        private void MovePlayer()
+        private void Move()
         {
             var nextPositionIntention =
                 this.player.GetNextPositionDelta(this.movementRequest,
@@ -55,7 +75,7 @@ namespace GraveKiller
             this.characterController.Move(nextPositionIntention);
         }
 
-        private void ConsumeRequest()
+        private void ConsumeMovementRequest()
         {
             this.movementRequest = null;
         }

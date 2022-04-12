@@ -1960,6 +1960,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aba609cf7bc44561b8e5cb0f0229437c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationSpeed: 20
+  playerStats: {fileID: 11400000, guid: 63f3a7fdc2c021443bb7b2d0ef2e7e43, type: 2}
 --- !u!143 &8582892816669313197
 CharacterController:
   m_ObjectHideFlags: 0

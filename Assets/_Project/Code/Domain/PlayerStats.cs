@@ -1,17 +1,8 @@
 ﻿namespace GraveKiller
 {
-    public class PlayerStats
+    public interface PlayerStats
     {
-        private float speed;
-
-        public PlayerStats(float speed)
-        {
-            this.speed = speed;
-        }
-
-        public float GetSpeed()
-        {
-            return this.speed;
-        }
+        public float GetSpeed();
+        public float GetAimingRange();
     }
 }
