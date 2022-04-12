@@ -7,6 +7,8 @@ namespace GraveKiller
         private readonly PlayerPositionProvider playerPositionProvider;
         private readonly EnemyMotor enemyMotor;
         private readonly int speed;
+        private readonly CharacterMovement characterMovement;
+        private readonly Rotator rotator;
 
         public Enemy(
             PlayerPositionProvider playerPositionProvider,
@@ -15,6 +17,8 @@ namespace GraveKiller
             this.playerPositionProvider = playerPositionProvider;
             this.enemyMotor = enemyMotor;
             this.speed = 5;
+            this.characterMovement = new CharacterMovement();
+            this.rotator = new Rotator();
         }
 
         public Vector3 GetNextMovement(float deltaSecondsElapsed)
@@ -26,11 +30,20 @@ namespace GraveKiller
             direction.y = 0;
             direction *= 0.5f;
 
-            var nextPositionDelta = new CharacterMovement(direction,
+            this.characterMovement.SetUp(direction,
                 deltaSecondsElapsed,
-                this.speed).GetNextPositionDelta();
+                this.speed);
+
+            var nextPositionDelta =
+                this.characterMovement.GetNextPositionDelta();
 
             return nextPositionDelta;
+        }
+
+        public Quaternion GetNextRotation(float deltaSecondsElapsed)
+        {
+            return this.rotator.GetRotationTo(this.enemyMotor.GetPosition(),
+                this.playerPositionProvider.GetPosition());
         }
     }
 }

@@ -44,7 +44,8 @@ namespace GraveKiller
         public void Update()
         {
             float delta = Time.deltaTime;
-            this.MoveEnemies(delta);
+            this.MoveEnemies(Time.deltaTime);
+
             this.enemyGenerator.AddTime(delta);
         }
 

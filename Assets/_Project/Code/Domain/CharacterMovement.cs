@@ -8,7 +8,19 @@ namespace GraveKiller
         private float delta;
         private float speed;
 
-        public CharacterMovement(Vector3 requestedDirection, float delta, float speed)
+        public CharacterMovement()
+        {
+        }
+
+        public CharacterMovement(
+            Vector3 requestedDirection,
+            float delta,
+            float speed)
+        {
+            this.SetUp(requestedDirection, delta, speed);
+        }
+
+        public void SetUp(Vector3 requestedDirection, float delta, float speed)
         {
             this.requestedDirection = requestedDirection.normalized;
             this.delta = delta;

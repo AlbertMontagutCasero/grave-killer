@@ -22,7 +22,8 @@ namespace GraveKiller
 
         public void ManagedUpdate(float delta)
         {
-            this.characterController.Move(this.enemy.GetNextMovement(delta));            
+            this.characterController.Move(this.enemy.GetNextMovement(delta));
+            this.transform.rotation = this.enemy.GetNextRotation(delta);
         }
 
         public Vector3 GetPosition()
