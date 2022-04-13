@@ -9,16 +9,16 @@ namespace GraveKiller
         private float speed = 10;
         
         [SerializeField]
-        private float aimingRange = 20;
+        private float aimingRadius = 20;
         
         public float GetSpeed()
         {
             return this.speed;
         }
 
-        public float GetAimingRange()
+        public float GetAimingRadius()
         {
-            return this.aimingRange;
+            return this.aimingRadius;
         }
     }
 }

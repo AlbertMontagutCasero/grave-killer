@@ -4,18 +4,17 @@ namespace GraveKiller
 {
     public class PlayerView : MonoBehaviour, PlayerMotor
     {
-        private Player player;
-        private MovementRequest movementRequest;
-
-        private CharacterController characterController;
-        private AimerSelector aimer;
-
         [SerializeField]
         private float rotationSpeed = 20;
 
         [SerializeField]
         private PlayerStatsScriptableObject playerStats;
-
+        
+        private Player player;
+        private MovementRequest movementRequest;
+        private CharacterController characterController;
+        private AimerSelector aimer;
+        
         private void Awake()
         {
             this.characterController = this.GetComponent<CharacterController>();

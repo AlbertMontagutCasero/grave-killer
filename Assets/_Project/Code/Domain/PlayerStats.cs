@@ -3,6 +3,6 @@
     public interface PlayerStats
     {
         public float GetSpeed();
-        public float GetAimingRange();
+        public float GetAimingRadius();
     }
 }

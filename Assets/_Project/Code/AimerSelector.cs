@@ -89,7 +89,7 @@ namespace GraveKiller
 
             return this.physicsRaycast.GetPositionsOverlappingSphere(
                 playerPosition,
-                this.playerStats.GetAimingRange(),
+                this.playerStats.GetAimingRadius(),
                 enemyLayer);
         }
     }
