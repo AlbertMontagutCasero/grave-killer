@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: PlayerStats
   m_EditorClassIdentifier: 
   speed: 10
-  aimingRadius: 8
+  aimingRadius: 4

@@ -48,3 +48,5 @@ MonoBehaviour:
   gameplayKeyboardInputControllerPrefab: {fileID: 6701881945310462340, guid: 6b15c93f2db63da42b56fcf188b8c71b, type: 3}
   spawnPosition: {fileID: 342551239616493000, guid: ed52051f6c0ac0a4ebe731a147779f84, type: 3}
   gameplayCameraPrefab: {fileID: 386933712880517937, guid: 5e046b30066d4e64a9a163fa48e95433, type: 3}
+  gameplayPadPrefab: {fileID: 9174597205342114845, guid: ea0b3b31ad258da4eba4f254284f6539, type: 3}
+  gameplayCanvasPrefab: {fileID: 6962196819063037902, guid: abc26303f533a044ab2172b84722faba, type: 3}

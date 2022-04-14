@@ -40,7 +40,10 @@ namespace GraveKiller
                 movementRequest.SetForward(-1);
             }
 
-            this.playerView.RequestMovement(movementRequest);
+            if (movementRequest.HasDirection())
+            {
+                this.playerView.RequestMovement(movementRequest);
+            }
         }
     }
 }

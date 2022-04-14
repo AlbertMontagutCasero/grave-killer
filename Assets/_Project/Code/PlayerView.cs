@@ -69,7 +69,7 @@ namespace GraveKiller
         {
             var nextPositionIntention =
                 this.player.GetNextPositionDelta(this.movementRequest,
-                    Time.fixedDeltaTime);
+                    Time.deltaTime);
 
             this.characterController.Move(nextPositionIntention);
         }
