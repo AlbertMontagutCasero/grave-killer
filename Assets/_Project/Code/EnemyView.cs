@@ -12,11 +12,8 @@ namespace GraveKiller
             this.characterController = this.GetComponent<CharacterController>();
         }
 
-        public void SetUp()
+        public void SetUp(PlayerPositionProvider playerPositionProvider)
         {
-            var playerPositionProvider = GameControllerLocator.GetInstance()
-                .GetController<PlayerPositionProvider>();
-
             this.enemy = new Enemy(playerPositionProvider,this);
         }
 

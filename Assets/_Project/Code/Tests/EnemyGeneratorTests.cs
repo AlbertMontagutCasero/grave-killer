@@ -1,7 +1,5 @@
-﻿using System.Collections.Generic;
-using NSubstitute;
+﻿using NSubstitute;
 using NUnit.Framework;
-using UnityEngine;
 
 namespace GraveKiller
 {
@@ -16,7 +14,7 @@ namespace GraveKiller
             int recivedTimes)
         {
             var doc = Substitute.For<EnemyGeneratorMotor>();
-            var sut = new EnemyGenerator(spawnEverySeconds, doc, null);
+            var sut = new EnemyGenerator(spawnEverySeconds, doc);
 
             var deltaSecondsElapsed = elapsedSeconds;
             sut.AddTime(deltaSecondsElapsed);
@@ -27,27 +25,7 @@ namespace GraveKiller
         [Test]
         public void GetSpawnPoint()
         {
-            var doc = Substitute.For<EnemyGeneratorMotor>();
-
-            var spawnPoints = new List<Vector3> {
-                new Vector3(5, 0, 0),
-                new Vector3(5, 0, 10),
-                new Vector3(0, 0, 10),
-                new Vector3(-5, 0, 10),
-                new Vector3(-5, 0, 10)
-            };
-
-            var sut = new EnemyGenerator(default, doc, spawnPoints);
-
-            var spawnPointsAmount = spawnPoints.Count;
-
-            for (int i = 0; i < spawnPointsAmount * 4; i++)
-            {
-                var result = sut.GetSpawnPoint();
-
-                var expectedSpawnPoint = spawnPoints[i % spawnPointsAmount];
-                Assert.That(result.Equals(expectedSpawnPoint));
-            }
+            Assert.Fail();
         }
     }
 }

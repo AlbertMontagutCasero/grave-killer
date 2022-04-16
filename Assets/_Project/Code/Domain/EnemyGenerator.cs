@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace GraveKiller
@@ -8,17 +9,14 @@ namespace GraveKiller
         private float elapsedTime;
         private float spawnEverySeconds;
         private EnemyGeneratorMotor enemyGeneratorMotor;
-        private int currentSpawnPoint;
-        private List<Vector3> spawnPoints;
 
         public EnemyGenerator(
             float spawnEverySeconds,
-            EnemyGeneratorMotor enemyGeneratorMotor,
-            List<Vector3> spawnPoints)
+            EnemyGeneratorMotor enemyGeneratorMotor)
         {
             this.spawnEverySeconds = spawnEverySeconds;
             this.enemyGeneratorMotor = enemyGeneratorMotor;
-            this.spawnPoints = spawnPoints;
+
         }
 
         public void AddTime(float deltaSecondsElapsed)
@@ -34,12 +32,12 @@ namespace GraveKiller
 
         public Vector3 GetSpawnPoint()
         {
-            var current = this.spawnPoints[this.currentSpawnPoint];
+            // var current = this.spawnPoints[this.currentSpawnPoint];
+            //
+            // this.currentSpawnPoint =
+            //     (this.currentSpawnPoint + 1) % this.spawnPoints.Count;
 
-            this.currentSpawnPoint =
-                (this.currentSpawnPoint + 1) % this.spawnPoints.Count;
-
-            return current;
+            throw new Exception("NOT IMPLEMENTED");
         }
     }
 }
