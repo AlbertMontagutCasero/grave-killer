@@ -9,6 +9,9 @@ namespace GraveKiller
         private float elapsedTime;
         private float spawnEverySeconds;
         private EnemyGeneratorMotor enemyGeneratorMotor;
+        private readonly SquaredSpawnZone spawnZone;
+        private readonly MapSize mapSize;
+        private readonly PlayerPositionProvider playerPositionProvider;
 
         public EnemyGenerator(
             float spawnEverySeconds,
@@ -16,7 +19,20 @@ namespace GraveKiller
         {
             this.spawnEverySeconds = spawnEverySeconds;
             this.enemyGeneratorMotor = enemyGeneratorMotor;
+        }
 
+        public EnemyGenerator(
+            float spawnEverySeconds,
+            EnemyGeneratorMotor enemyGeneratorMotor,
+            SquaredSpawnZone spawnZone,
+            MapSize mapSize,
+            PlayerPositionProvider playerPositionProvider)
+        {
+            this.spawnEverySeconds = spawnEverySeconds;
+            this.enemyGeneratorMotor = enemyGeneratorMotor;
+            this.spawnZone = spawnZone;
+            this.mapSize = mapSize;
+            this.playerPositionProvider = playerPositionProvider;
         }
 
         public void AddTime(float deltaSecondsElapsed)
@@ -32,12 +48,27 @@ namespace GraveKiller
 
         public Vector3 GetSpawnPoint()
         {
-            // var current = this.spawnPoints[this.currentSpawnPoint];
-            //
-            // this.currentSpawnPoint =
-            //     (this.currentSpawnPoint + 1) % this.spawnPoints.Count;
+            var playerPosition = this.playerPositionProvider.GetPosition();
 
-            throw new Exception("NOT IMPLEMENTED");
+            float spawnX;
+            float spawnY;
+            bool isInsideLeft;
+            bool isInsideRight;
+            bool isInsideTop;
+            bool isInsideBottom;
+
+            do
+            {
+                spawnX = playerPosition.x + this.spawnZone.GetX();
+                spawnY = playerPosition.z + this.spawnZone.GetY();
+                
+                isInsideLeft = spawnX >= this.mapSize.startX;
+                isInsideRight = spawnX <= this.mapSize.startX + this.mapSize.width;
+                isInsideBottom = spawnY >= this.mapSize.startY;
+                isInsideTop = spawnY <= this.mapSize.startY + this.mapSize.height;
+            } while (!isInsideLeft || !isInsideRight || !isInsideBottom || !isInsideTop);
+
+            return new Vector3(spawnX, 0, spawnY);
         }
     }
 }

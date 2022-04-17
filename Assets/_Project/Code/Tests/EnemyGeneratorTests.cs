@@ -28,32 +28,48 @@ namespace GraveKiller
         {
             var mapStartCoordinates = 0;
             var squaredMapSize = 20;
-            var docPlayerPosition = new Vector3(5, 0, 0);
-            var docMapSize = new Vector3(squaredMapSize, 0, squaredMapSize);
+            var playerPosition = new Vector3(5, 0, 0);
+
+            var docMapSize = new MapSize(squaredMapSize,
+                squaredMapSize,
+                mapStartCoordinates,
+                mapStartCoordinates);
+
+            var docPlayerPositionProvider =
+                Substitute.For<PlayerPositionProvider>();
+
+            docPlayerPositionProvider.GetPosition().Returns(playerPosition);
 
             var docSquaredSpawnZone = new SquaredSpawnZone(
                 new SignedRange(new Range(5, 10)),
                 new SignedRange(new Range(10, 12)));
 
-            var sut = new EnemyGenerator(Mathf.Infinity, null);
+            var sut = new EnemyGenerator(Mathf.Infinity,
+                null,
+                docSquaredSpawnZone,
+                docMapSize,
+                docPlayerPositionProvider);
+
             var spawnPoint = sut.GetSpawnPoint();
 
-            var spawnPointXPositionIsInsideMap = spawnPoint.x >= mapStartCoordinates &&
-                                                 spawnPoint.x <= squaredMapSize;
+            var spawnPointXPositionIsInsideMap =
+                spawnPoint.x >= mapStartCoordinates &&
+                spawnPoint.x <= squaredMapSize;
 
-            var spawnPointYPositionIsInsideMap = spawnPoint.z >= mapStartCoordinates &&
-                                                 spawnPoint.z <= squaredMapSize;
+            var spawnPointYPositionIsInsideMap =
+                spawnPoint.z >= mapStartCoordinates &&
+                spawnPoint.z <= squaredMapSize;
 
-            Assert.That(spawnPointXPositionIsInsideMap);
-            Assert.That(spawnPointYPositionIsInsideMap);
+            Assert.That(spawnPointXPositionIsInsideMap, $"x {spawnPoint.x} expected  >= {mapStartCoordinates} <= {squaredMapSize}");
+            Assert.That(spawnPointYPositionIsInsideMap, $"y {spawnPoint.z} expected  >= {mapStartCoordinates} <= {squaredMapSize}");
 
-            var correctRangeMinPositiveX = docPlayerPosition.x + 5;
-            var correctRangeMaxPositiveX = docPlayerPosition.x + 10;
+            var correctRangeMinPositiveX = playerPosition.x + 5;
+            var correctRangeMaxPositiveX = playerPosition.x + 10;
             var correctRangeMinNegativeX = -correctRangeMaxPositiveX;
             var correctRangeMaxNegativeX = -correctRangeMinPositiveX;
 
-            var correctRangeMinPositiveY = docPlayerPosition.z + 10;
-            var correctRangeMaxPositiveY = docPlayerPosition.z + 12;
+            var correctRangeMinPositiveY = playerPosition.z + 10;
+            var correctRangeMaxPositiveY = playerPosition.z + 12;
             var correctRangeMinNegativeY = -correctRangeMaxPositiveY;
             var correctRangeMaxNegativeY = -correctRangeMinPositiveY;
 
